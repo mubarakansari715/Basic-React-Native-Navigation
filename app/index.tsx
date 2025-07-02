@@ -2,7 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { TouchableOpacity } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { enableFreeze } from "react-native-screens";
 import BottomSheetScreen from "./screens/bottomsheet";
 import DetailsScreen from "./screens/details";
@@ -20,7 +20,7 @@ const Tabs = createBottomTabNavigator();
 export default function Index() {
   return (
     <SafeAreaProvider style={{ flex: 1 }}>
-      <SafeAreaView style={{ flex: 1 }}>
+      {/* <SafeAreaView style={{ flex: 1 }}> */}
         <Stack.Navigator
           screenOptions={{
             headerShown: true,
@@ -76,7 +76,7 @@ export default function Index() {
             options={{ headerShown: false }}
           />
         </Stack.Navigator>
-      </SafeAreaView>
+      {/* </SafeAreaView> */}
     </SafeAreaProvider>
   );
 }
